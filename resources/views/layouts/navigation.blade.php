@@ -16,6 +16,16 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('posts.index')" :active="request()->routeIs('post')">
+                        Post
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('posts.create')" :active="request()->routeIs('posts.create')">
+                        Create Posts
+                    </x-nav-link>
+                </div>
             </div>
             @auth
                   <!-- Settings Dropdown -->
